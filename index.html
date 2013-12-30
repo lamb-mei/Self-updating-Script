@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Self-updating Scrpit Demo</title>
+</head>
+<body>
+
+  <h1>Self-updating Script Demo</h1>
+
+  <p>請打開 Chrome DevTools 的 Networks 頁籤來觀察 :)</p>
+
+  <p><a href="index2.html">下一頁</a></p>
+
+  <script>
+    var cmdQ = ['sendBeacon'];
+    (function() {
+    	var s1 = document.createElement('script');
+    	s1.async = true;
+    	s1.src = 'http://labs.patw.idv.tw/selfupdating/bootstrap.js';
+    	var s0 = document.getElementsByTagName('script')[0];
+    	s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+
+</body>
+</html>
