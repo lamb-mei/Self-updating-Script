@@ -2,7 +2,7 @@
   $version = (int)$_GET['v'];
 
   // 若使用者 cache 的版本小於最新版，則透過下面 script 來強制更新
-  if ($version < 2) {
+  if ($version < 3) {
 ?>
 
 (function() {
